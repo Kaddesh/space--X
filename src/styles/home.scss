@@ -1,0 +1,100 @@
+@import '../styles/variables';
+@import '../styles/mixins'; 
+
+.home-container {
+    background-image: url("/public/assets/home/background-home-desktop.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    @include breakpoint-down(small) {
+        background-image: url("/public/assets/home/background-home-mobile.jpg");
+    }
+
+    @include breakpoint-down(medium) {
+        background-image: url("/public/assets/home/background-home-tablet.jpg");
+        height: 100%;
+    }
+}
+
+
+.home {
+    @include flex-center();
+    @include padding-r-l();
+    padding-top: 30vh;
+
+    @include breakpoint-down(medium){
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    @include breakpoint-down(small) {
+        padding-top: 50px;
+    }
+
+   
+}
+.home-body {
+    color: white;
+
+    @include breakpoint-down(medium) {
+        @include flex-center();
+        flex-direction: column;
+        justify-content: center;
+      
+    }
+    
+      h3{
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      h1{
+        font-size: 100px;
+        padding-top: 25px 0px 35px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+
+        @include breakpoint-down(medium) {
+            padding: 35px 0px 40px;
+        }
+      }
+      p{
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 2;
+        letter-spacing: 0.5px;
+
+        @include breakpoint-down(medium) {
+            text-align: center;
+        }
+      }
+}
+
+.break {
+    @include breakpoint-down(small) {
+        display: none;
+        
+    }
+}
+.rounded-div {
+    @include flex-center();
+    justify-content:center;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: white;
+
+    @include breakpoint-down(medium) {
+        margin-top: 80px;
+    }
+    @include breakpoint-down(small) {
+        height: 150px;
+        width: 150px;
+        margin-top: 120px;
+    }
+}
+

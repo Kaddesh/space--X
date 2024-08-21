@@ -1,0 +1,23 @@
+// src/styles/global.scss
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+  @include responsive-font(24px, 32px);
+  margin-bottom: $base-spacing;
+}
+
+

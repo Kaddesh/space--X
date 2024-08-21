@@ -1,0 +1,139 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.navbar-class {
+    @include flex-center();
+    position: relative;
+    padding-top: 40px;
+    padding-left: 40px;
+
+    @include breakpoint-down(small) {
+        padding: 30px 16px 0px;
+    }
+  
+}
+
+
+/*.ruler {
+    position: absolute;
+    transform: none;
+    top: 40px;
+    right: 0;
+    left: 0;
+    border: none;
+    border-top: 2px;
+    color: white;
+    z-index: 1;
+}*/
+
+.nav-links {
+    display: block;
+
+    ul {
+        @include flex-center ();  
+        gap: 20px;
+        background-color: gray;
+        padding: 16px 10px 16px 130px;
+       
+          div {
+             @include flex-center ();
+              margin-right: 20px;
+              gap: 10px;
+
+              &.identifier {
+                position: relative;
+        
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: 3px;
+                    left: 0;
+                    right: 0;
+                    bottom: -14px;
+                    background: linear-gradient(to right, #fff, #dedada);
+                    opacity: 0;
+                    transition: opacity 300ms ease-in-out;
+                }
+        
+                &:hover::before {
+                    opacity: 1;
+                }
+            }
+        
+      
+              p {
+                  color: white;
+                  font-size: 14px;
+              }
+      
+              li{
+                  list-style-type: none;
+              }
+      
+               li a {
+                  text-decoration: none;
+                  color: white;
+                  font-size: 14px;
+              }
+          }
+      }
+
+    
+    @include breakpoint-down(small) {
+        display: none;
+    }
+}
+
+.hamburger {
+    display: none;
+
+    @include breakpoint-down(small) {
+        display: block;
+    }
+}
+
+    .u-listed {
+        display: none;
+
+        @include breakpoint-down(small) {
+            display: block;
+            background-color: rgba(11, 13, 23, 0.7);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top: 85px; 
+            right: 0;
+            z-index: 1;
+            height: 100vh;
+            width: 60%;
+            padding-top: 40px;
+            
+        }
+        .sidebar {
+            display: flex;
+            padding-left: 20px;
+            margin-bottom: 20px;
+
+              p {
+                color: white;
+                font-size: 14px;
+                margin-right: 10px;
+            }
+    
+            li{
+                list-style-type: none;
+            }
+    
+             li a {
+                text-decoration: none;
+                color: #dedada;
+                font-size: 14px;
+            }
+        }
+      }
+      
+
+
+
+
+  

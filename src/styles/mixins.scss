@@ -1,0 +1,48 @@
+
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin padding-r-l{
+  padding-right: 100px;
+  padding-left: 100px;
+
+  @include breakpoint-down(small){
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+@mixin responsive-font($min-size, $max-size) {
+  font-size: $min-size;
+
+  @media (min-width: 768px) {
+    font-size: $max-size;
+  }
+}
+
+@mixin vertical-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+// Breakpoints
+$breakpoints-up: ("medium": "640px", "large": "1024px", "xlarge": "1400px");
+
+// 639px, 1023px, 1399px
+$breakpoints-down: ("small": "639px", "medium": "1023px", "large": "1399px");
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
