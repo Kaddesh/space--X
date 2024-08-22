@@ -41,6 +41,9 @@
 
     h3 {
         font-size: 16px;
+        @include breakpoint-down(small){
+            text-align: center;
+        }
     }
     span {
         color: gray;
@@ -52,6 +55,7 @@
             align-self: center;
             height: 300px;
             width: 300px;
+            margin: 45px 0px;
         }
 
         @include breakpoint-down(small) {
@@ -127,6 +131,7 @@
 
        @include breakpoint-down(small) {
         font-size: 50px;
+        margin-bottom: 20px;
        }
     }
 
@@ -163,10 +168,12 @@
 
     @include breakpoint-down(medium) {
         gap: 140px;
+        text-align: center;
     }
 
     @include breakpoint-down(small) {
-        gap: 80px;
+        gap: 30px;
+        flex-direction: column;
     }
 
     p{
@@ -175,7 +182,11 @@
     }
 
     h1 {
-        font-size: 17px;
+        font-size: 30px;
         padding-top: 5px;
+        color:   #a7a0a0;
+        @include breakpoint-down(medium) {
+            font-size: 25px;
+        }
     }
 }

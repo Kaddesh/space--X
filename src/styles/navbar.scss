@@ -32,8 +32,8 @@
     ul {
         @include flex-center ();  
         gap: 20px;
-        background-color: gray;
-        padding: 16px 10px 16px 130px;
+        background-color: rgba(18, 19, 20, 0.7);
+        padding: 25px 10px 25px 130px;
        
           div {
              @include flex-center ();

@@ -21,7 +21,7 @@
 
 .body-container {
     @include padding-r-l();
-    padding-top: 60px;
+    padding-top: 30px;
     display: flex;  
     gap: 20px;
 
@@ -58,8 +58,8 @@
     }
         
     h2 {
-        font-size: 20px;
-        margin: 180px 0px 10px;
+        font-size: 30px;
+        margin: 150px 0px 10px;
         color: #dedada;
        @include breakpoint-down(medium){
         margin-top: 80px;
@@ -72,7 +72,7 @@
         font-size: 40px;
         text-transform: uppercase;
         @include breakpoint-down(medium){
-            font-size: 30px;
+            font-size: 40px;
         }
         @include breakpoint-down(small){
             font-size: 20px;
@@ -86,7 +86,7 @@
         width: 85%;
 
         @include breakpoint-down(medium){
-            width: 70%;
+            width: 80%;
             text-align: center;
         }
         @include breakpoint-down(small){
@@ -125,7 +125,7 @@
 .imgg-container {
     flex: 1;
     flex-shrink: 0;
-    margin-top: 80px;
+    margin-top: 60px;
     overflow: hidden; 
     margin-bottom: 40px;
 

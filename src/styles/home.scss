@@ -54,11 +54,14 @@
       }
       h1{
         font-size: 100px;
+        font-weight: 400;
+        font-style: normal;
         padding-top: 25px 0px 35px;
         margin-bottom: 0;
         text-transform: uppercase;
 
         @include breakpoint-down(medium) {
+            font-size: 80px;
             padding: 35px 0px 40px;
         }
       }
@@ -87,6 +90,10 @@
     width: 200px;
     border-radius: 100%;
     background-color: white;
+
+    h3 {
+        font-weight: 400;
+    }
 
     @include breakpoint-down(medium) {
         margin-top: 80px;
