@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import Navbar from "../components/navbar";
 import "../styles/crew.scss";
 import { DataContext } from "../components/context.jsx";
+import { useSwipeable } from 'react-swipeable';
 
 export default function Crew() {
     const [ifIndex, setIfIndex] = useState(0);
@@ -11,13 +12,24 @@ export default function Crew() {
         setIfIndex(index);
     };
 
+    const handlers = useSwipeable({
+        onSwipedLeft: () => {
+            setIfIndex((prevIndex) => (prevIndex + 1) % crew.length);
+        },
+        onSwipedRight: () => {
+            setIfIndex((prevIndex) => (prevIndex - 1 + crew.length) % crew.length);
+        },
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    });
+
     if (!crew || crew.length === 0) {
         return <div>Loading...</div>;
     }
 
     return (
         <section>
-            <main className='crew-container'>
+            <main className='crew-container' {...handlers}>
                 <Navbar />
                 <div className="body-container">
                     <div className="content">
