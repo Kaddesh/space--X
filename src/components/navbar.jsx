@@ -13,15 +13,15 @@ export default function Navbar() {
     <section>
        <div className="navbar-class">
         <div className="img-container">
-        <img src="/assets/shared/logo.svg" alt="logo" className="image"/>
+        <img src="/space--X/assets/shared/logo.svg" alt="logo" className="image"/>
         </div>
         <hr className="ruler" />
 
         <div className="hamburger" onClick={handleMenuToggle}>
         {isMenuOpen ? (
-          <img src="/assets/shared/icon-close.svg" alt="close" />
+          <img src="/space--X/assets/shared/icon-close.svg" alt="close" />
         ) : (
-          <img src="/assets/shared/icon-hamburger.svg" alt="open" />
+          <img src="/space--X/assets/shared/icon-hamburger.svg" alt="open" />
         )}
       </div>
       {isMenuOpen && ( 
