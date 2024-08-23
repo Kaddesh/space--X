@@ -14,7 +14,7 @@ export const DataProvider = ({ children }) => {
         
         const fetchData = async () => {
             try {
-                const response = await fetch('../../public/data.json'); 
+                const response = await fetch('../../data.json'); 
                 const data = await response.json();
                 setCrew(data.crew);
                 setDestinations(data.destinations);
