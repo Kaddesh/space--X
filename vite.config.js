@@ -10,4 +10,5 @@ export default defineConfig({
       dirs: 'src/pages', // The directory to generate routes from
     }),
   ],
+  base: '/your-repository-name/',
 })
