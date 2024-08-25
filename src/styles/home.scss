@@ -3,11 +3,12 @@
 
 .home-container {
     background-image: url("/public/assets/home/background-home-desktop.jpg");
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
+    
 
     @include breakpoint-down(small) {
         background-image: url("/public/assets/home/background-home-mobile.jpg");
@@ -23,20 +24,21 @@
 .home {
     @include flex-center();
     @include padding-r-l();
-    padding-top: 30vh;
+    padding-top: 200px;
+    padding-bottom: 100px;
+   
 
     @include breakpoint-down(medium){
         flex-direction: column;
         justify-content: center;
-        padding-top: 150px;
-        padding-bottom: 150px;
+        padding-top: 80px;
+        padding-bottom:80px;
     }
 
     @include breakpoint-down(small) {
         padding-top: 50px;
     }
 
-   
 }
 .home-body {
     color: white;

@@ -9,6 +9,11 @@
   padding-right: 100px;
   padding-left: 100px;
 
+  @include breakpoint-down(medium){
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
   @include breakpoint-down(small){
     padding-right: 16px;
     padding-left: 16px;

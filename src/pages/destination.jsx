@@ -17,9 +17,9 @@ export default function Destination() {
         <section id="destination">
             <main className="desti-container">
                 <Navbar />
+                <h3><span>01</span>PICK YOUR DESTINATION</h3>
                 <div className="content-map">
                     <div className="fr-1">
-                        <h3><span>01</span>PICK YOUR DESTINATION</h3>
                         <img src={destinations[openIndex].images.png} alt={destinations[openIndex].name} /> 
                     </div>
                     <div className="fr-2">
