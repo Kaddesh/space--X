@@ -15,8 +15,7 @@ export default function Navbar() {
         <div className="img-container">
         <img src={`${import.meta.env.BASE_URL}assets/shared/logo.svg`} alt="logo" className="image"/>
         </div>
-        <hr className="ruler" />
-
+         <div className="rule"></div>
         <div className="hamburger" onClick={handleMenuToggle}>
         {isMenuOpen ? (
           <img src={`${import.meta.env.BASE_URL}assets/shared/icon-close.svg`} alt="close" />

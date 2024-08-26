@@ -10,21 +10,26 @@
     @include breakpoint-down(small) {
         padding: 30px 16px 0px;
     }
-  
+  .rule {
+    position: absolute;
+    left: 150px;
+   height: 1px;
+   width: 53%;
+   background-color: #6b6666;
+   border: none;
+
+   @include breakpoint-down(large) {
+    width: 35%;
+    left: 200px;
+   }
+   @include breakpoint-down(medium) {
+    display: none;
+  }
+  }
+
 }
 
 
-/*.ruler {
-    position: absolute;
-    transform: none;
-    top: 40px;
-    right: 0;
-    left: 0;
-    border: none;
-    border-top: 2px;
-    color: white;
-    z-index: 1;
-}*/
 
 .nav-links {
     display: block;
@@ -34,6 +39,10 @@
         gap: 20px;
         background-color: rgba(20, 32, 45, 0.7);
         padding: 25px 10px 25px 130px;
+
+        @include breakpoint-down(large) {
+            padding-left: 200px
+        }
        
           div {
              @include flex-center ();
