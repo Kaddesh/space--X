@@ -17,11 +17,32 @@
     @include breakpoint-down(medium) {
         background-image: url("/public/assets/crew/background-crew-tablet.jpg");
     }
+
+    h3 {
+        margin-top: 60px;
+        padding-left: 100px;
+        font-size: 25px;
+        text-transform: uppercase;
+        @include breakpoint-down(medium){
+            text-align: center;
+            font-size: 20px;
+            padding-left: 0px;
+        }
+        @include breakpoint-down(small){
+            font-size: 14px;
+        }
+
+        span {
+            color: gray;
+            margin-right: 10px;
+        }
+
+    }
 }
 
 .body-container {
     @include padding-r-l();
-    padding-top: 30px;
+    padding-top: 50px;
     display: flex;  
     gap: 20px;
 
@@ -40,19 +61,6 @@
     @include breakpoint-down(medium) {
        
     }
-    h3 {
-        font-size: 14px;
-        text-transform: uppercase;
-        @include breakpoint-down(small){
-            text-align: center;
-            font-size: 14px;
-            padding-left: 0px;
-        }
-    }
-    span {
-        color: gray;
-        margin-right: 10px;
-    }
 
    .details {
     display: flex;
@@ -63,18 +71,19 @@
     }
         
     h2 {
-        font-size: 30px;
+        font-size: 40px;
         margin: 150px 0px 10px;
         color: #dedada;
        @include breakpoint-down(medium){
         margin-top: 80px;
+        font-size: 16px;
        }
        @include breakpoint-down(small){
-        font-size: 16px;
+        
     }
     }
     h1 {
-        font-size: 40px;
+        font-size: 50px;
         text-transform: uppercase;
         @include breakpoint-down(medium){
             font-size: 40px;
@@ -85,7 +94,7 @@
     }
 
     p {
-        font-size: 14px;
+        font-size: 16px;
         color: #dedada;
         margin-top: 20px;
         width: 85%;
@@ -93,6 +102,7 @@
         @include breakpoint-down(medium){
             width: 80%;
             text-align: center;
+            font-size: 14px;
         }
         @include breakpoint-down(small){
             width: 90%;

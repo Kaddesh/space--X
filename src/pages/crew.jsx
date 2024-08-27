@@ -31,9 +31,10 @@ export default function Crew() {
         <section>
             <main className='crew-container' {...handlers}>
                 <Navbar />
+                <h3><span>02</span>Meet your crew</h3>
                 <div className="body-container">
                     <div className="content">
-                        <h3><span>02</span>Meet your crew</h3>
+                        
                         <div className="details">
                             <h2>{crew[ifIndex].role}</h2>
                             <h1>{crew[ifIndex].name}</h1>

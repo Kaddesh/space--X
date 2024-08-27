@@ -6,8 +6,13 @@
 }
 
 @mixin padding-r-l{
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 200px;
+  padding-left: 200px;
+
+  @include breakpoint-down(large){
+    padding-right: 130px;
+    padding-left: 130px;
+  }
 
   @include breakpoint-down(medium){
     padding-right: 50px;
